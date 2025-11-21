@@ -13,6 +13,7 @@ def time_function_kernel_bench(
     kernel_name: str | None = None,
 ) -> TimeEvalResult:
     """Time a function using Cuda events."""
+    # https://github.com/ScalingIntelligence/KernelBench/blob/5c88b2319076e8d44b9901914de7b45d220944e9/src/eval.py#L628
     # Warmup trials
     for _ in range(warmup_time):
         func(*args)
