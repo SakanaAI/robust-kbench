@@ -212,6 +212,9 @@ prof_results = prof_cuda_kernel(
 |------|-------------|---------|-----------|-----------|
 | [KernelBench](tasks/kernelbench) | Original KernelBench tasks | ✓ | ✗ | Baseline comparison |
 
+## 🚧 A Note of Caution
+
+While `robust-kbench` aims to provide a safer approach to correctness checking, LLMs can be capable of reward-hacking in previously unknown ways. We provide 3 different ways for estimating runtimes including the timing functions provided by [KernelBench](https://github.com/ScalingIntelligence/KernelBench/blob/5c88b2319076e8d44b9901914de7b45d220944e9/src/eval.py#L628), [torch benchmark](https://github.com/SakanaAI/robust-kbench/blob/4032fd32c4f35ce7fd46bcb4518b432035d085a0/robust_kbench/sandbox/eval_forward_fn.py#L46) and [Triton `do_bench`](https://github.com/SakanaAI/robust-kbench/blob/4032fd32c4f35ce7fd46bcb4518b432035d085a0/robust_kbench/sandbox/eval_forward_fn.py#L78). Whenever you observe strong speedups, please be cautious and double-check all numbers with human experts.
 
 ## 🤝 Contributing
 
